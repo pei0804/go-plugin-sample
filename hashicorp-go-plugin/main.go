@@ -23,7 +23,7 @@ func main() {
 	client := plugin.NewClient(&plugin.ClientConfig{
 		HandshakeConfig: handshakeConfig,
 		Plugins:         pluginMap,
-		Cmd:             exec.Command("./plugin/greeter"),
+		Cmd:             exec.Command("./plugin/greeter_impl.go"),
 		Logger:          logger,
 	})
 	defer client.Kill()
